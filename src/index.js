@@ -32,9 +32,6 @@ function getData(data) {
     countryInfo.innerHTML = '';
     list.innerHTML = '';
     throw new Error('Oops, there is no country with that name');
-  } else {
-    countryInfo.innerHTML = '';
-    list.innerHTML = '';
   }
 }
 
