@@ -11,6 +11,11 @@ const countryInfo = document.querySelector('.country-info');
 input.addEventListener(
   'input',
   debounce(event => {
+    if (!event.target.value) {
+      countryInfo.innerHTML = '';
+      list.innerHTML = '';
+      return;
+    }
     fetchCountries(event.target.value)
       .then(data => getData(data))
       .catch(error => {
